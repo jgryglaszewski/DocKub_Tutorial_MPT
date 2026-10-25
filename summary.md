@@ -1,13 +1,29 @@
-# Movie plan
+# Containerization & orchestration
 
-- Intro (show *It works on my machine* situation; there is a solution for that - Docker!)
-- Project description
-- First dockerfiles
-- Problem with running manually multiple dockers; solution - docker-compose
-- One of the dockers crash; solution - Kubernetes.
-- Exercise
-- Using already existing Dockers from DockerHub to create online boutique.
+## Modern programming techniques
 
-# Docker project details
+# 1st step – single Docker
 
-Python with FastAPI...
+Works on my machine problem
+
+# 2nd step – using multiple Dockers
+
+* Manually
+* Using docker-compose
+
+# 3rd step – zero code
+
+Exploring DockerHub in greater depth
+
+# 4th step - Kubernetes
+
+* Scalability
+* Self-healing
+* Load balancing
+* etc.
+
+# Exercises
+
+From single Docker to simple Kubernetes orchestration with solutions on our Github.
+Stay tuned for updates!
+
