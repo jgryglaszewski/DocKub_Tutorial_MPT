@@ -5,8 +5,8 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# Konfiguracja z zmiennych środowiskowych. Wartości domyślne pasują do naszej sieci.
-DB_HOST = os.getenv("DB_HOST", "todo-db")
+# configuration from env values; defaults can be used in docker run exercises
+DB_HOST = os.getenv("DB_HOST", "todo-db") 
 DB_NAME = os.getenv("DB_NAME", "todo")
 DB_USER = os.getenv("DB_USER", "postgres")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
@@ -20,7 +20,7 @@ def get_conn():
 
 app = FastAPI()
 
-# Przeglądarka otwiera frontend na innym porcie, więc bez CORS zablokuje odpowiedzi.
+# without CORS browser would block responses (frontend is on other port)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], #["http://localhost:8080"]
@@ -67,7 +67,7 @@ def update_todo(todo_id: int, body: TodoPatch):
         )
         row = cur.fetchone()
     if row is None:
-        raise HTTPException(status_code=404, detail="Nie ma takiego zadania")
+        raise HTTPException(status_code=404, detail="No such task")
     return row_to_dict(row)
 
 
@@ -77,5 +77,5 @@ def delete_todo(todo_id: int):
         cur.execute("DELETE FROM todos WHERE id = %s", (todo_id,))
         deleted = cur.rowcount
     if deleted == 0:
-        raise HTTPException(status_code=404, detail="Nie ma takiego zadania")
+        raise HTTPException(status_code=404, detail="No such task")
     return Response(status_code=204)
