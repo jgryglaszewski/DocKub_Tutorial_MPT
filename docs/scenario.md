@@ -21,8 +21,7 @@ cache
 
 multi-stage builds 
 1. Hello World in Java
-2. Backend in SpringBoot?
-
+2. Backend in SpringBoot - /spring_boot_helloworld
 
 
 - ex1 - https://infn-bari-school.github.io/docker-tutorial/image/multistage/multistage-example/
