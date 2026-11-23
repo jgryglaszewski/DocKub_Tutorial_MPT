@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class HelloWorld {
 
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	String home() {
 		return "Hello World!";
 	}
