@@ -1,4 +1,6 @@
-# Super duper scenario:
+# Super duper scenario
+
+# Part I - first docker
 
 ## Download docker engine:
 
@@ -96,3 +98,42 @@ Go to official docker website / application development / Docker Engine
 ## multi-multi.Dockerfile
 - show last Dockerfile
 - talk it through
+
+
+# Part II - compose
+
+> vscode
+## structure of the project - frontend and db
+- short word about micro services
+- CORS
+  
+## first compose
+
+## healthcheck 
+
+## use enviromental variables
+
+# Part III - Wiki
+
+# Part IV - Kubernetes
+
+> browser
+
+## Installation 
+
+- download Minikube https://minikube.sigs.k8s.io/docs/start 
+- if kubectl wasn't installed with it, install it https://kubernetes.io/docs/tasks/tools/ 
+
+## Short theory
+
+- pod
+- node (worker/master)
+  - control plane (master node)
+- cluster 
+
+- deployment
+- service
+- configmap
+- secret 
+- ingress 
+- (there are more, but won't be discussed)
