@@ -103,15 +103,74 @@ Go to official docker website / application development / Docker Engine
 # Part II - compose
 
 > vscode
+
 ## structure of the project - frontend and db
 - short word about micro services
 - CORS
+- show all 3 Dockerfiles
   
 ## first compose
 
-## healthcheck 
+`docker compose up`
+> browser
 
-## use enviromental variables
+See the app: http://localhost:8080/ or rather only its frontend. DB should crash because backend sends requests before it's ready to handle them.
+
+> vscode
+
+- `docker compose ps`
+- `docker compose logs`
+- `docker compose down`
+
+## add healthcheck 
+
+`docker compose up`
+
+> browser
+
+See the app: http://localhost:8080/
+
+> vscode 
+
+- `docker compose down`
+- Let's see if our data is lost
+- `docker compose up`
+
+> browser
+
+See the app: http://localhost:8080/
+
+> vscode 
+
+`docker compose down`
+
+## add volume
+
+`docker compose up`
+
+> browser
+
+See the app: http://localhost:8080/
+
+> vscode 
+
+`docker compose down`
+
+## a little bit of security
+
+- networks:
+  - internal (db + backend) vs external (backend + frontend)
+- .env file
+
+`docker compose up`
+
+> browser
+
+See the app: http://localhost:8080/
+
+> vscode 
+
+`docker compose down`
 
 # Part III - Wiki
 
@@ -125,6 +184,8 @@ Go to official docker website / application development / Docker Engine
 - if kubectl wasn't installed with it, install it https://kubernetes.io/docs/tasks/tools/ 
 
 ## Short theory
+
+> graphic
 
 - pod
 - node (worker/master)
